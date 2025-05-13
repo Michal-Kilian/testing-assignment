@@ -1,4 +1,4 @@
-import {ElementType} from "react";
+import { ElementType } from 'react';
 
 export type Service = {
   id: string;
@@ -8,6 +8,6 @@ export type Service = {
 };
 
 export type SectionType =
-  | "servicesSection"
-  | "aboutUsSection"
-  | "contactSection";
+  | 'servicesSection'
+  | 'aboutUsSection'
+  | 'contactSection';

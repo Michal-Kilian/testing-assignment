@@ -1,28 +1,28 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export const HeroAnimation = () => {
   return (
-    <div className="w-full flex flex-row items-end justify-center absolute bottom-0 z-1">
+    <div className='absolute bottom-0 z-1 flex w-full flex-row items-end justify-center'>
       <Image
-        src={"/images/city-gif.gif"}
-        alt={"Hero Image"}
+        src={'/images/city-gif.gif'}
+        alt={'Hero Image'}
         width={300}
         height={300}
-        className="w-1/3 h-36"
+        className='h-36 w-1/3'
       />
       <Image
-        src={"/images/city-gif.gif"}
-        alt={"Hero Image"}
+        src={'/images/city-gif.gif'}
+        alt={'Hero Image'}
         width={300}
         height={300}
-        className="w-1/3 h-36"
+        className='h-36 w-1/3'
       />
       <Image
-        src={"/images/city-gif.gif"}
-        alt={"Hero Image"}
+        src={'/images/city-gif.gif'}
+        alt={'Hero Image'}
         width={300}
         height={300}
-        className="w-1/3 h-36"
+        className='h-36 w-1/3'
       />
     </div>
   );

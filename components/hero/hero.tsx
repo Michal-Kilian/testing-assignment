@@ -1,13 +1,13 @@
-import {HeroTitle} from "@/components/hero/hero-title";
-import {CallToAction} from "@/components/hero/call-to-action";
-import {HeroAnimation} from "@/components/hero/hero-animation";
+import { HeroTitle } from '@/components/hero/hero-title';
+import { CallToAction } from '@/components/hero/call-to-action';
+import { HeroAnimation } from '@/components/hero/hero-animation';
 
 export const Hero = () => {
   return (
-    <div className="flex flex-col items-center justify-between bg-brick-wall w-full h-100 relative">
-      <div className="flex flex-row w-full items-center justify-between mt-16 px-10">
+    <div className='bg-brick-wall relative flex h-100 w-full flex-col items-center justify-between'>
+      <div className='mt-16 flex w-full flex-row items-center justify-between px-10'>
         <HeroTitle />
-        <div className="w-1/2 flex items-center justify-center">
+        <div className='flex w-1/2 items-center justify-center'>
           <CallToAction />
         </div>
       </div>
