@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import {createRef, ReactNode} from "react";
+import {ReactNode} from "react";
 import {Header} from "@/components/header/header";
 import {Footer} from "@/components/footer/footer";
 
