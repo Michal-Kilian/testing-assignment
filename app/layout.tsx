@@ -3,6 +3,7 @@ import "./globals.css";
 import {ReactNode} from "react";
 import {Header} from "@/components/header/header";
 import {Footer} from "@/components/footer/footer";
+import {Toaster} from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Testing Assignment",
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

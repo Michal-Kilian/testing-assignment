@@ -15,18 +15,18 @@ export const ServiceCard = ({
   },
 }: ServiceCardProps) => {
   return (
-    <Card className="rounded-lg h-64 w-full max-w-md hover:scale-105 transition-transform duration-300 bg-hero-accent text-primary-foreground flex flex-row items-center justify-center border-none">
+    <Card className="rounded-lg h-64 w-full max-w-90 hover:scale-105 transition-transform duration-300 bg-accent text-accent-foreground flex flex-row items-center justify-center border-none">
       <CardHeader className="w-2/3">
         <CardTitle className="text-xl">
           {title}
         </CardTitle>
-        <CardDescription className="text-primary-foreground">
+        <CardDescription className="text-accent-foreground">
           {description}
         </CardDescription>
       </CardHeader>
       <Link href={"/services/" + id}>
         <CardContent
-          className="flex items-center justify-center w-25 h-25 p-6 rounded-full border-2 border-primary-foreground text-primary-foreground mr-6 hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-hero"
+          className="flex items-center justify-center w-25 h-25 p-6 rounded-full border-2 border-muted-foreground text-muted-foreground mr-6 hover:scale-105 transition-all duration-300 cursor-pointer hover:text-accent-foreground hover:border-accent-foreground bg-background"
         >
           <Icon className="w-full h-full"/>
         </CardContent>
