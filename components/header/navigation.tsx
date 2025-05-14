@@ -1,38 +1,31 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import { Mail, Package, UsersRound } from 'lucide-react';
-import { handleNavigateToSection } from '@/lib/utils';
+import { Heart, Mail, Package, UsersRound } from 'lucide-react';
+import { NavigationButton } from '@/components/header/navigation-button';
 
 export const Navigation = () => {
   return (
     <div className='flex flex-row items-center justify-end gap-x-3'>
-      <Button
-        variant='default'
-        size='default'
-        className='bg-header text-header-foreground hover:bg-header-hover cursor-pointer'
-        onClick={() => handleNavigateToSection('servicesSection')}
-      >
-        <Package />
-        Služby
-      </Button>
-      <Button
-        variant='default'
-        size='default'
-        className='bg-header text-header-foreground hover:bg-header-hover cursor-pointer'
-        onClick={() => handleNavigateToSection('aboutUsSection')}
-      >
-        <UsersRound />O nás
-      </Button>
-      <Button
-        variant='default'
-        size='default'
-        className='bg-header text-header-foreground hover:bg-header-hover cursor-pointer'
-        onClick={() => handleNavigateToSection('contactSection')}
-      >
-        <Mail />
-        Kontakt
-      </Button>
+      <NavigationButton
+        title="Služby"
+        section="servicesSection"
+        icon={Package}
+      />
+      <NavigationButton
+        title="O nás"
+        icon={UsersRound}
+        section="aboutUsSection"
+      />
+      <NavigationButton
+        title="Referencie"
+        icon={Heart}
+        section="referencesSection"
+      />
+      <NavigationButton
+        title="Kontakt"
+        icon={Mail}
+        section="contactSection"
+      />
     </div>
   );
 };
