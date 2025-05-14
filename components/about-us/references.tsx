@@ -7,9 +7,9 @@ export const References = () => {
   return (
     <section
       id='referencesSection'
-      className='bg-background relative mt-12 flex w-full flex-col items-center justify-center overflow-hidden py-2'
+      className='relative mt-12 flex w-full flex-col items-center justify-center overflow-hidden py-2'
     >
-      <Marquee className='[--duration:50s]'>
+      <Marquee pauseOnHover className='[--duration:50s]'>
         {REFERENCES.map((reference: Reference) => (
           <ReferenceCard key={reference.id} reference={reference} />
         ))}

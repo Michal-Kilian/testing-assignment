@@ -1,10 +1,14 @@
-import { ElementType } from 'react';
+import { ElementType, ReactElement } from 'react';
 
 export type Service = {
   id: string;
-  title: string;
-  description: string;
-  icon: ElementType;
+  Icon: ElementType,
+  name: string,
+  description: string,
+  href: string,
+  cta: string,
+  className: string,
+  background: ReactElement,
 };
 
 export type Reference = {
@@ -20,6 +24,6 @@ export type SectionType =
   | 'referencesSection'
   | 'contactSection';
 
-export type Mode = 'playful' | 'professional';
+export type HeroMode = 'playful' | 'professional';
 
 export type FormFieldName = 'email' | 'serviceId' | 'description';

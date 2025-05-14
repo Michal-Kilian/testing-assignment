@@ -25,7 +25,7 @@ export const NavigationButton = ({
         <Button
           variant='default'
           size='default'
-          className='bg-header text-header-foreground hover:bg-header-hover cursor-pointer'
+          className='bg-primary text-primary-foreground hover:bg-header cursor-pointer'
           onClick={() => handleNavigateToSection(section)}
         >
           <Icon />

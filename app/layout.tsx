@@ -4,7 +4,6 @@ import { ReactNode } from 'react';
 import { Header } from '@/components/header/header';
 import { Footer } from '@/components/footer/footer';
 import { Toaster } from '@/components/ui/sonner';
-import { DevControls } from '@/components/dev/dev-controls';
 import { TooltipProvider } from '@/components/ui/tooltip';
 
 export const metadata: Metadata = {
@@ -25,7 +24,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {children}
           <Footer />
           <Toaster />
-          {process.env.NODE_ENV === 'development' && <DevControls />}
         </TooltipProvider>
       </body>
     </html>

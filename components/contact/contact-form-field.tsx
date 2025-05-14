@@ -77,8 +77,8 @@ export const ContactFormField = ({
                   value={service.id}
                   className='hover:bg-accent flex cursor-pointer flex-row items-center justify-start gap-x-2'
                 >
-                  <service.icon />
-                  {service.title}
+                  <service.Icon />
+                  {service.name}
                 </SelectItem>
               ))}
             </SelectContent>

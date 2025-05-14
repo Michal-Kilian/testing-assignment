@@ -8,42 +8,56 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
 import { Briefcase, Smile } from 'lucide-react';
-import { useState } from 'react';
-import { Mode } from '@/lib/types';
+import { Dispatch, SetStateAction } from 'react';
+import { HeroMode } from '@/lib/types';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 
-export const DevControls = () => {
-  const [mode, setMode] = useState<Mode>('playful');
+interface DevControlsProps {
+  heroMode: HeroMode;
+  setHeroModeAction: Dispatch<SetStateAction<HeroMode>>;
+}
 
+export const DevControls = ({
+  heroMode,
+  setHeroModeAction,
+}: DevControlsProps) => {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          variant='default'
-          size='icon'
-          className='fixed right-5 bottom-5 cursor-pointer'
-        >
-          {mode === 'playful' ? <Smile /> : <Briefcase />}
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className='flex flex-col items-center justify-center gap-y-1'>
-        <DropdownMenuItem asChild onSelect={() => setMode('playful')}>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <DropdownMenuTrigger asChild>
+            <Button
+              variant='default'
+              size='icon'
+              className='z-99 fixed right-5 bottom-5 cursor-pointer'
+            >
+              {heroMode === 'playful' ? <Smile /> : <Briefcase />}
+            </Button>
+          </DropdownMenuTrigger>
+        </TooltipTrigger>
+        <TooltipContent side="left">
+          {heroMode === "playful" ? "Playful hero" : "Professional hero"}
+        </TooltipContent>
+      </Tooltip>
+      <DropdownMenuContent className='flex flex-col items-center justify-center gap-y-1 bg-primary'>
+        <DropdownMenuItem asChild onSelect={() => setHeroModeAction('professional')}>
           <Button
-            variant='outline'
-            size='default'
-            className='w-full cursor-pointer'
-          >
-            <Smile />
-            Playful
-          </Button>
-        </DropdownMenuItem>
-        <DropdownMenuItem asChild onSelect={() => setMode('professional')}>
-          <Button
-            variant='outline'
+            variant='default'
             size='default'
             className='w-full cursor-pointer'
           >
             <Briefcase />
             Professional
+          </Button>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild onSelect={() => setHeroModeAction('playful')}>
+          <Button
+            variant='default'
+            size='default'
+            className='w-full cursor-pointer'
+          >
+            <Smile />
+            Playful
           </Button>
         </DropdownMenuItem>
       </DropdownMenuContent>

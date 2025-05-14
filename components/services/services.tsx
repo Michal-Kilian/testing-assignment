@@ -1,19 +1,27 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { Package } from 'lucide-react';
 import { SERVICES } from '@/lib/services';
+import { BentoCard, BentoGrid } from '@/components/magicui/bento-grid';
 import { Service } from '@/lib/types';
-import { ServiceCard } from '@/components/services/service-card';
 
 export const Services = () => {
   return (
     <section
-      id='servicesSection'
+      id="servicesSection"
+      className="flex w-full flex-col flex-wrap items-center justify-center p-6"
+    >
+      <BentoGrid>
+        {SERVICES.map((service: Service) => (
+          <BentoCard
+            key={service.name}
+            {...service}
+          />
+        ))}
+      </BentoGrid>
+    </section>
+  );
+
+  {/*return (
+    <section
+      id="servicesSection"
       className='flex w-full flex-col items-center justify-center p-6'
     >
       <Card className='w-full'>
@@ -34,5 +42,5 @@ export const Services = () => {
         </CardContent>
       </Card>
     </section>
-  );
+  );*/}
 };

@@ -9,6 +9,7 @@ export const HeroAnimation = () => {
         width={300}
         height={300}
         className='h-36 w-1/3'
+        unoptimized
       />
       <Image
         src={'/images/city-gif.gif'}
@@ -16,6 +17,7 @@ export const HeroAnimation = () => {
         width={300}
         height={300}
         className='h-36 w-1/3'
+        unoptimized
       />
       <Image
         src={'/images/city-gif.gif'}
@@ -23,6 +25,7 @@ export const HeroAnimation = () => {
         width={300}
         height={300}
         className='h-36 w-1/3'
+        unoptimized
       />
     </div>
   );
