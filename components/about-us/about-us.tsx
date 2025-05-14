@@ -1,15 +1,3 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { Heart } from 'lucide-react';
-import { Marquee } from '@/components/magicui/marquee';
-import { REFERENCES } from '@/lib/references';
-import { Reference } from '@/lib/types';
-import { ReferenceCard } from '@/components/about-us/reference-card';
 import { Globe } from '@/components/magicui/globe';
 import { DynamicTypingAnimation } from '@/components/about-us/dynamic-typing-animation';
 
