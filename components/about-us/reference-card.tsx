@@ -13,7 +13,7 @@ interface ReferenceCardProps {
 
 export const ReferenceCard = ({ reference }: ReferenceCardProps) => {
   return (
-    <Card className='border-none relative h-64 w-96 overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300'>
+    <Card className='relative h-64 w-96 overflow-hidden rounded-lg border-none transition-transform duration-300 hover:scale-105'>
       <Image
         src={reference.image}
         alt={reference.title}

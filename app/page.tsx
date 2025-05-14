@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import { Hero } from '@/components/hero/hero';
 import { Services } from '@/components/services/services';
@@ -12,29 +12,24 @@ import { HeroMode } from '@/lib/types';
 import { Particles } from '@/components/magicui/particles';
 
 export default function Home() {
-  const [heroMode, setHeroMode] = useState<HeroMode>("professional");
+  const [heroMode, setHeroMode] = useState<HeroMode>('professional');
 
   return (
     <div className='flex h-full w-full flex-1 flex-col items-center justify-start'>
-      <Hero
-        heroMode={heroMode}
-      />
+      <Hero heroMode={heroMode} />
       {process.env.NODE_ENV === 'development' && (
-        <DevControls
-          heroMode={heroMode}
-          setHeroModeAction={setHeroMode}
-        />
+        <DevControls heroMode={heroMode} setHeroModeAction={setHeroMode} />
       )}
 
-      <main className="w-full bg-primary relative">
-        {heroMode === "playful" && (
-          <div className="absolute top-0 h-64 to-primary w-full bg-linear-to-b from-[#525eaf] w-full" />
+      <main className='bg-primary relative w-full'>
+        {heroMode === 'playful' && (
+          <div className='to-primary absolute top-0 h-64 w-full bg-linear-to-b from-[#525eaf]' />
         )}
         <Particles
-          className="absolute inset-0 z-0 w-full h-full"
+          className='absolute inset-0 z-0 h-full w-full'
           quantity={200}
           ease={100}
-          color="#FFF"
+          color='#FFF'
           refresh
         />
         <AppearOnScroll>

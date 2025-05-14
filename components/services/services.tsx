@@ -5,15 +5,12 @@ import { Service } from '@/lib/types';
 export const Services = () => {
   return (
     <section
-      id="servicesSection"
-      className="flex w-full flex-col flex-wrap items-center justify-center p-6"
+      id='servicesSection'
+      className='flex w-full flex-col flex-wrap items-center justify-center p-6'
     >
       <BentoGrid>
         {SERVICES.map((service: Service) => (
-          <BentoCard
-            key={service.name}
-            {...service}
-          />
+          <BentoCard key={service.name} {...service} />
         ))}
       </BentoGrid>
     </section>

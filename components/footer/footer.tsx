@@ -3,9 +3,9 @@ import { FooterNavigation } from '@/components/footer/footer-navigation';
 
 export const Footer = () => {
   return (
-    <footer className='relative h-64 bg-black text-primary-foreground w-full'>
-      <div className="z-1 absolute top-0 h-32 to-black w-full bg-linear-to-b from-primary w-full" />
-      <div className="z-2 absolute top-32 h-32 flex w-full flex-row items-center justify-between p-2 bg-black">
+    <footer className='text-primary-foreground relative h-64 w-full bg-black'>
+      <div className='from-primary absolute top-0 z-1 h-32 w-full bg-linear-to-b to-black' />
+      <div className='absolute top-32 z-2 flex h-32 w-full flex-row items-center justify-between bg-black p-2'>
         <div className='mb-1'>
           <Logo />
         </div>

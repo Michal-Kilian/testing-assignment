@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import { Heart, Mail, Package, UsersRound } from 'lucide-react';
 import { FooterNavigationButton } from '@/components/footer/footer-navigation-button';
