@@ -7,25 +7,21 @@ export const Navigation = () => {
   return (
     <div className='flex flex-row items-center justify-end gap-x-3'>
       <NavigationButton
-        title="Služby"
-        section="servicesSection"
+        title='Služby'
+        section='servicesSection'
         icon={Package}
       />
       <NavigationButton
-        title="O nás"
+        title='O nás'
         icon={UsersRound}
-        section="aboutUsSection"
+        section='aboutUsSection'
       />
       <NavigationButton
-        title="Referencie"
+        title='Referencie'
         icon={Heart}
-        section="referencesSection"
+        section='referencesSection'
       />
-      <NavigationButton
-        title="Kontakt"
-        icon={Mail}
-        section="contactSection"
-      />
+      <NavigationButton title='Kontakt' icon={Mail} section='contactSection' />
     </div>
   );
 };

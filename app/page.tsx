@@ -7,12 +7,10 @@ import { References } from '@/components/about-us/references';
 
 export default function Home() {
   return (
-    <div
-      className='flex h-full w-full flex-1 flex-col items-center justify-start'
-    >
+    <div className='flex h-full w-full flex-1 flex-col items-center justify-start'>
       <Hero />
 
-      <main className='w-full bg-linear-to-b from-[#525eaf] to-primary-foreground'>
+      <main className='to-primary-foreground w-full bg-linear-to-b from-[#525eaf]'>
         <AppearOnScroll>
           <Services />
         </AppearOnScroll>

@@ -1,26 +1,29 @@
 import { Reference } from '@/lib/types';
-import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import Image from 'next/image';
 
 interface ReferenceCardProps {
   reference: Reference;
 }
 
-export const ReferenceCard = ({
-  reference,
-}: ReferenceCardProps) => {
+export const ReferenceCard = ({ reference }: ReferenceCardProps) => {
   return (
-    <Card className="relative overflow-hidden rounded-lg w-96 h-64 border-none">
+    <Card className='relative h-64 w-96 overflow-hidden rounded-lg border-none'>
       <Image
         src={reference.image}
         alt={reference.title}
         fill
-        className="object-cover z-0"
+        className='z-0 object-cover'
       />
-      <div className="h-32 absolute z-10 bg-black/70 py-6 rounded-lg bottom-0 left-0 right-0 rounded-t-none">
+      <div className='absolute right-0 bottom-0 left-0 z-10 h-32 rounded-lg rounded-t-none bg-black/70 py-6'>
         <CardHeader>
-          <CardTitle className="text-white">{reference.title}</CardTitle>
-          <CardDescription className="text-gray-300">
+          <CardTitle className='text-white'>{reference.title}</CardTitle>
+          <CardDescription className='text-gray-300'>
             {reference.description}
           </CardDescription>
         </CardHeader>

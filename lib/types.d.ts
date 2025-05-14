@@ -20,11 +20,6 @@ export type SectionType =
   | 'referencesSection'
   | 'contactSection';
 
-export type Mode =
-  | "playful"
-  | "professional";
+export type Mode = 'playful' | 'professional';
 
-export type FormFieldName =
-  | 'email'
-  | 'serviceId'
-  | 'description';
+export type FormFieldName = 'email' | 'serviceId' | 'description';

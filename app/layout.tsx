@@ -20,15 +20,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='en'>
       <body className='bg-background text-foreground flex h-full min-h-screen w-full flex-1 flex-col items-center justify-start antialiased'>
-      <TooltipProvider delayDuration={0}>
-        <Header />
-        {children}
-        <Footer />
-        <Toaster />
-        {process.env.NODE_ENV === "development" && (
-          <DevControls />
-        )}
-      </TooltipProvider>
+        <TooltipProvider delayDuration={0}>
+          <Header />
+          {children}
+          <Footer />
+          <Toaster />
+          {process.env.NODE_ENV === 'development' && <DevControls />}
+        </TooltipProvider>
       </body>
     </html>
   );

@@ -14,13 +14,13 @@ export const DynamicTypingAnimation = ({
   duration = 100,
 }: DynamicTypingAnimationProps) => {
   return (
-    <div className="w-full flex flex-row items-center justify-center">
-      <div className="bg-hero-accent/90 rounded-lg p-6 transition-all duration-300 w-fit shadow-lg">
+    <div className='flex w-full flex-row items-center justify-center'>
+      <div className='bg-hero-accent/90 w-fit rounded-lg p-6 shadow-lg transition-all duration-300'>
         <TypingAnimation
           startOnView={startOnView}
           delay={delay}
           duration={duration}
-          className="text-lg sm:text-xl md:text-2xl lg:text-3xl transition-all duration-300"
+          className='text-lg transition-all duration-300 sm:text-xl md:text-2xl lg:text-3xl'
         >
           {title}
         </TypingAnimation>

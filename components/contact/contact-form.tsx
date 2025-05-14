@@ -7,7 +7,13 @@ import { z } from 'zod';
 import { contactSchema } from '@/lib/schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { toast } from 'sonner';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { ContactFormField } from '@/components/contact/contact-form-field';
 
 export const ContactForm = () => {
@@ -43,30 +49,30 @@ export const ContactForm = () => {
         </CardHeader>
         <CardContent className='w-full'>
           <Form {...form}>
-            <form className="w-full">
+            <form className='w-full'>
               <fieldset disabled={false} className='w-full space-y-3'>
                 <ContactFormField
                   form={form}
-                  name="email"
-                  label="Email"
-                  type="email"
+                  name='email'
+                  label='Email'
+                  type='email'
                   placeholder='johndoe@mail.sk'
                 />
 
                 <ContactFormField
                   form={form}
-                  name="serviceId"
-                  label="Služba"
-                  type="text"
-                  placeholder="Vyberte službu"
+                  name='serviceId'
+                  label='Služba'
+                  type='text'
+                  placeholder='Vyberte službu'
                 />
 
                 <ContactFormField
                   form={form}
-                  name="description"
-                  label="Popis"
-                  type="text"
-                  placeholder="V krátkosti opíšte, o čo konkrétne máte záujem"
+                  name='description'
+                  label='Popis'
+                  type='text'
+                  placeholder='V krátkosti opíšte, o čo konkrétne máte záujem'
                 />
 
                 <Button

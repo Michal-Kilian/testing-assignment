@@ -1,4 +1,10 @@
-import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import {
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 import { FileText, Mail } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { ControllerRenderProps, UseFormReturn } from 'react-hook-form';
@@ -6,7 +12,13 @@ import { z } from 'zod';
 import { contactSchema } from '@/lib/schemas';
 import { FormFieldName, Service } from '@/lib/types';
 import { HTMLInputTypeAttribute } from 'react';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import { SERVICES } from '@/lib/services';
 import { Textarea } from '@/components/ui/textarea';
 
@@ -26,28 +38,31 @@ export const ContactFormField = ({
   placeholder,
 }: ContactFormFieldProps) => {
   const getInputField = (
-    field: ControllerRenderProps<{
-      email: string;
-      serviceId: string;
-      description: string;
-      }, FormFieldName>
+    field: ControllerRenderProps<
+      {
+        email: string;
+        serviceId: string;
+        description: string;
+      },
+      FormFieldName
+    >,
   ) => {
     switch (name) {
       case 'email':
         return (
           <FormControl>
-            <div className="relative">
-              <Mail className="text-muted-foreground absolute top-2.5 left-3 h-4 w-4" />
+            <div className='relative'>
+              <Mail className='text-muted-foreground absolute top-2.5 left-3 h-4 w-4' />
               <Input
                 type={type}
                 placeholder={placeholder}
-                className="pl-9"
+                className='pl-9'
                 {...field}
               />
             </div>
           </FormControl>
         );
-      case "serviceId":
+      case 'serviceId':
         return (
           <Select onValueChange={field.onChange}>
             <FormControl className='w-full'>
@@ -69,7 +84,7 @@ export const ContactFormField = ({
             </SelectContent>
           </Select>
         );
-      case "description":
+      case 'description':
         return (
           <FormControl>
             <div className='relative'>
@@ -90,10 +105,8 @@ export const ContactFormField = ({
       control={form.control}
       name={name}
       render={({ field }) => (
-        <FormItem className="w-full">
-          <FormLabel className="text-muted-foreground">
-            {label}
-          </FormLabel>
+        <FormItem className='w-full'>
+          <FormLabel className='text-muted-foreground'>{label}</FormLabel>
           {getInputField(field)}
           <FormMessage />
         </FormItem>

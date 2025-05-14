@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import { ReactNode, RefObject, useEffect, useRef, useState } from 'react';
 
@@ -11,7 +11,7 @@ interface AppearOnScrollProps {
 export const AppearOnScroll = ({
   children,
   threshold = 0.3,
-  animationClass = "fade-in",
+  animationClass = 'fade-in',
 }: AppearOnScrollProps) => {
   const [inView, setInView] = useState(false);
   const ref: RefObject<HTMLDivElement | null> = useRef<HTMLDivElement>(null);
@@ -26,7 +26,7 @@ export const AppearOnScroll = ({
           }
         });
       },
-      { threshold: threshold, }
+      { threshold: threshold },
     );
 
     const currentRef: HTMLDivElement | null = ref.current;
@@ -45,10 +45,7 @@ export const AppearOnScroll = ({
   return (
     <div
       ref={ref}
-      className={`
-        transition-opacity duration-1000 
-        ${inView ? animationClass : 'opacity-0'}
-      `}
+      className={`transition-opacity duration-1000 ${inView ? animationClass : 'opacity-0'} `}
     >
       {children}
     </div>

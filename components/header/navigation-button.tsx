@@ -2,7 +2,11 @@ import { handleNavigateToSection } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { SectionType } from '@/lib/types';
 import { ElementType } from 'react';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 
 interface NavigationButtonProps {
   title: string;
@@ -25,12 +29,10 @@ export const NavigationButton = ({
           onClick={() => handleNavigateToSection(section)}
         >
           <Icon />
-          <span className="hidden sm:block">{title}</span>
+          <span className='hidden sm:block'>{title}</span>
         </Button>
       </TooltipTrigger>
-      <TooltipContent className="block sm:hidden">
-        {title}
-      </TooltipContent>
+      <TooltipContent className='block sm:hidden'>{title}</TooltipContent>
     </Tooltip>
   );
 };

@@ -24,15 +24,15 @@ export const ServiceCard = ({
           {description}
         </CardDescription>
       </CardHeader>
-      <Link href={'/services/' + id} className="w-1/3">
+      <Link href={'/services/' + id} className='w-1/3'>
         <CardContent
           className={cn(
             'border-primary-foreground text-primary-foreground',
             'mr-6 flex h-25 w-25 cursor-pointer items-center',
             'justify-center rounded-full border-2 p-6 transition-all',
             'duration-300 hover:scale-105',
-            'bg-linear-to-br from-primary-foreground to-[#525eaf]',
-            'hover:bg-linear-to-tl'
+            'from-primary-foreground bg-linear-to-br to-[#525eaf]',
+            'hover:bg-linear-to-tl',
           )}
         >
           <Icon className='h-full w-full' />
