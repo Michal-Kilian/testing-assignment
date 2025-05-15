@@ -2,7 +2,7 @@ import { ArrowRightIcon } from '@radix-ui/react-icons';
 import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react';
 
 import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import { cn, handleNavigateToSection } from '@/lib/utils';
 
 interface BentoGridProps extends ComponentPropsWithoutRef<'div'> {
   children: ReactNode;
@@ -39,7 +39,6 @@ const BentoCard = ({
   background,
   Icon,
   description,
-  href,
   cta,
   ...props
 }: BentoCardProps) => (
@@ -74,11 +73,12 @@ const BentoCard = ({
         asChild
         size='sm'
         className='text-primary-foreground pointer-events-auto'
+        onClick={() => handleNavigateToSection("contactSection")}
       >
-        <a href={href}>
+        <div className="cursor-pointer">
           {cta}
           <ArrowRightIcon className='ms-2 h-4 w-4 rtl:rotate-180' />
-        </a>
+        </div>
       </Button>
     </div>
     <div className='pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10' />

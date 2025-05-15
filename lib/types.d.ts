@@ -19,10 +19,15 @@ export type Reference = {
 };
 
 export type SectionType =
+  | 'heroSection'
   | 'servicesSection'
   | 'aboutUsSection'
   | 'referencesSection'
   | 'contactSection';
+
+export type NavigationType =
+  | "header"
+  | "footer";
 
 export type HeroMode = 'playful' | 'professional';
 

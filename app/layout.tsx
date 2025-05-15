@@ -18,7 +18,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='en'>
-      <body className='bg-background text-foreground flex h-full min-h-screen w-full flex-1 flex-col items-center justify-start antialiased'>
+      <body className='bg-background text-foreground flex h-full min-h-screen w-full flex-1 flex-col items-center justify-start antialiased overflow-x-hidden'>
         <TooltipProvider delayDuration={0}>
           <Header />
           {children}

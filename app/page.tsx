@@ -5,7 +5,7 @@ import { Services } from '@/components/services/services';
 import { Contact } from '@/components/contact/contact';
 import { AppearOnScroll } from '@/components/appear-on-scroll/appear-on-scroll';
 import { AboutUs } from '@/components/about-us/about-us';
-import { References } from '@/components/about-us/references';
+import { References } from '@/components/references/references';
 import { DevControls } from '@/components/dev/dev-controls';
 import { useState } from 'react';
 import { HeroMode } from '@/lib/types';

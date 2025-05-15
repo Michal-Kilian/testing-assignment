@@ -10,9 +10,6 @@ import { toast } from 'sonner';
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
 } from '@/components/ui/card';
 import { ContactFormField } from '@/components/contact/contact-form-field';
 
@@ -32,21 +29,18 @@ export const ContactForm = () => {
     setSubmitPending(true);
     setTimeout(() => {
       setSubmitPending(false);
-      console.log(contactData);
-      toast.success('Ďakujeme, že ste vyjadrili záujem');
+
+      console.log("Contact data:", contactData);
+
+      toast.success('Úspešne odoslané', {
+        description: "Ďakujeme, že ste vyjadrili záujem o naše služby"
+      });
     }, 2000);
   };
 
   return (
-    <CardContent className='flex w-full max-w-md flex-row items-center justify-center gap-6 px-6 transition-all duration-200'>
-      <Card className='w-full'>
-        <CardHeader className='flex flex-row items-center justify-between'>
-          <div className='w-full'>
-            <CardTitle>Máte záujem o naše služby?</CardTitle>
-            <CardDescription>Vyplňte náš formulár</CardDescription>
-          </div>
-          <Send />
-        </CardHeader>
+    <div className='px-6 flex w-full max-w-md flex-row items-center justify-center gap-6 transition-all duration-200'>
+      <Card className='w-full bg-primary'>
         <CardContent className='w-full'>
           <Form {...form}>
             <form className='w-full'>
@@ -77,9 +71,9 @@ export const ContactForm = () => {
 
                 <Button
                   type='submit'
-                  variant='default'
+                  variant='outline'
                   size='default'
-                  className='w-full cursor-pointer'
+                  className='w-full cursor-pointer mt-6'
                   onClick={form.handleSubmit(handleOnValidForm)}
                   disabled={
                     Object.keys(form.formState.touchedFields).length < 2
@@ -97,6 +91,6 @@ export const ContactForm = () => {
           </Form>
         </CardContent>
       </Card>
-    </CardContent>
+    </div>
   );
 };

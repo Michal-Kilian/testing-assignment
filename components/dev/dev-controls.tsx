@@ -54,7 +54,7 @@ export const DevControls = ({
             className='w-full cursor-pointer'
           >
             <Briefcase />
-            Professional
+            Professional hero
           </Button>
         </DropdownMenuItem>
         <DropdownMenuItem asChild onSelect={() => setHeroModeAction('playful')}>
@@ -64,7 +64,7 @@ export const DevControls = ({
             className='w-full cursor-pointer'
           >
             <Smile />
-            Playful
+            Playful hero
           </Button>
         </DropdownMenuItem>
       </DropdownMenuContent>
