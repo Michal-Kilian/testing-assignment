@@ -56,7 +56,7 @@ export const ContactFormField = ({
               <Input
                 type={type}
                 placeholder={placeholder}
-                className='pl-9 bg-background'
+                className='bg-background pl-9'
                 {...field}
               />
             </div>
@@ -66,7 +66,7 @@ export const ContactFormField = ({
         return (
           <Select onValueChange={field.onChange}>
             <FormControl className='w-full'>
-              <SelectTrigger className="bg-accent">
+              <SelectTrigger className='bg-accent'>
                 <SelectValue placeholder={placeholder} />
               </SelectTrigger>
             </FormControl>
@@ -91,7 +91,7 @@ export const ContactFormField = ({
               <FileText className='text-muted-foreground absolute top-2.5 left-3 h-4 w-4' />
               <Textarea
                 placeholder='V krátkosti opíšte, o čo konkrétne máte záujem'
-                className='min-h-24 resize-none pt-2 pl-9 bg-background'
+                className='bg-background min-h-24 resize-none pt-2 pl-9'
                 {...field}
               />
             </div>

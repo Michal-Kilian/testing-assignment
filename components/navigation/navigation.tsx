@@ -9,14 +9,14 @@ interface NavigationProps {
   navigationType: NavigationType;
 }
 
-export const Navigation = ({
-  navigationType,
-}: NavigationProps) => {
+export const Navigation = ({ navigationType }: NavigationProps) => {
   return (
-    <div className={cn(
-      'w-full flex flex-row items-center gap-x-3',
-      navigationType === "header" ? "justify-end" : "justify-evenly",
-    )}>
+    <div
+      className={cn(
+        'flex w-full flex-row items-center gap-x-3',
+        navigationType === 'header' ? 'justify-end' : 'justify-evenly',
+      )}
+    >
       <NavigationButton
         title='Domov'
         section='heroSection'
@@ -50,4 +50,3 @@ export const Navigation = ({
     </div>
   );
 };
-

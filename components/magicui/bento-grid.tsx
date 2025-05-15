@@ -73,9 +73,9 @@ const BentoCard = ({
         asChild
         size='sm'
         className='text-primary-foreground pointer-events-auto'
-        onClick={() => handleNavigateToSection("contactSection")}
+        onClick={() => handleNavigateToSection('contactSection')}
       >
-        <div className="cursor-pointer">
+        <div className='cursor-pointer'>
           {cta}
           <ArrowRightIcon className='ms-2 h-4 w-4 rtl:rotate-180' />
         </div>

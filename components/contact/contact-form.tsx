@@ -7,10 +7,7 @@ import { z } from 'zod';
 import { contactSchema } from '@/lib/schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { toast } from 'sonner';
-import {
-  Card,
-  CardContent,
-} from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { ContactFormField } from '@/components/contact/contact-form-field';
 
 export const ContactForm = () => {
@@ -30,17 +27,17 @@ export const ContactForm = () => {
     setTimeout(() => {
       setSubmitPending(false);
 
-      console.log("Contact data:", contactData);
+      console.log('Contact data:', contactData);
 
       toast.success('Úspešne odoslané', {
-        description: "Ďakujeme, že ste vyjadrili záujem o naše služby"
+        description: 'Ďakujeme, že ste vyjadrili záujem o naše služby',
       });
     }, 2000);
   };
 
   return (
-    <div className='px-6 flex w-full max-w-md flex-row items-center justify-center gap-6 transition-all duration-200'>
-      <Card className='w-full bg-primary'>
+    <div className='flex w-full max-w-md flex-row items-center justify-center gap-6 px-6 transition-all duration-200'>
+      <Card className='bg-primary w-full'>
         <CardContent className='w-full'>
           <Form {...form}>
             <form className='w-full'>
@@ -73,7 +70,7 @@ export const ContactForm = () => {
                   type='submit'
                   variant='outline'
                   size='default'
-                  className='w-full cursor-pointer mt-6'
+                  className='mt-6 w-full cursor-pointer'
                   onClick={form.handleSubmit(handleOnValidForm)}
                   disabled={
                     Object.keys(form.formState.touchedFields).length < 2

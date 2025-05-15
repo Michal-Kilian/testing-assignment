@@ -9,7 +9,7 @@ export const References = () => {
       id='referencesSection'
       className='relative mt-14 flex w-full flex-col items-center justify-center overflow-hidden py-2'
     >
-      <h3 className="text-3xl w-full text-center my-6 text-primary-foreground text-shadow-lg tracking-tight font-medium">
+      <h3 className='text-primary-foreground my-6 w-full text-center text-3xl font-medium tracking-tight text-shadow-lg'>
         Prezrite si naše referencie
       </h3>
       <Marquee pauseOnHover className='[--duration:60s]'>

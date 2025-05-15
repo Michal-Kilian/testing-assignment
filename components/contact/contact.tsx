@@ -7,7 +7,7 @@ export const Contact = () => {
   return (
     <section
       id='contactSection'
-      className='mt-20 md:mt-6 flex w-full flex-col md:flex-row h-fit md:h-96 items-center justify-center gap-12 p-12'
+      className='mt-20 flex h-fit w-full flex-col items-center justify-center gap-12 p-12 md:mt-6 md:h-96 md:flex-row'
     >
       <ContactInformation />
       <ContactForm />

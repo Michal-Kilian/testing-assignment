@@ -25,12 +25,14 @@ export const NavigationButton = ({
     <Tooltip>
       <TooltipTrigger asChild>
         <Button
-          variant={navigationType === "header" ? "default" : 'link'}
-          size={navigationType === "header" ? "default" : 'sm'}
+          variant={navigationType === 'header' ? 'default' : 'link'}
+          size={navigationType === 'header' ? 'default' : 'sm'}
           className={cn(
             'text-primary-foreground cursor-pointer p-0',
-            navigationType === "header" ? "bg-primary" : "bg-transparent",
-            navigationType === "header" ? "hover:bg-header" : "hover:bg-transparent",
+            navigationType === 'header' ? 'bg-primary' : 'bg-transparent',
+            navigationType === 'header'
+              ? 'hover:bg-header'
+              : 'hover:bg-transparent',
           )}
           onClick={() => handleNavigateToSection(section)}
         >

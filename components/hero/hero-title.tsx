@@ -5,7 +5,8 @@ export const HeroTitle = () => {
         Spoľahlivý partner pre Vaše projekty
       </h1>
       <p className='w-full text-center text-xl text-shadow-md'>
-        Profesionálne riešenie prác od demolácie cez vzduchotechniku až po komplexné stavebné riešenia
+        Profesionálne riešenie prác od demolácie cez vzduchotechniku až po
+        komplexné stavebné riešenia
       </p>
     </div>
   );

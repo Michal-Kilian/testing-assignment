@@ -25,9 +25,7 @@ export type SectionType =
   | 'referencesSection'
   | 'contactSection';
 
-export type NavigationType =
-  | "header"
-  | "footer";
+export type NavigationType = 'header' | 'footer';
 
 export type HeroMode = 'playful' | 'professional';
 

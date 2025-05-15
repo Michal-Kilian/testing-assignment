@@ -4,35 +4,35 @@ import { Mail, Phone } from 'lucide-react';
 
 export const ContactInformation = () => {
   return (
-    <div className="h-full w-full max-w-lg text-primary-foreground flex flex-col items-start justify-center">
-      <h3 className="w-full text-left tracking-tight text-3xl text-shadow-lg font-medium mb-2">
+    <div className='text-primary-foreground flex h-full w-full max-w-lg flex-col items-start justify-center'>
+      <h3 className='mb-2 w-full text-left text-3xl font-medium tracking-tight text-shadow-lg'>
         Máte záujem o naše služby?
       </h3>
-      <p className="w-full text-left text-lg">
+      <p className='w-full text-left text-lg'>
         Vyplňte náš formulár a my Vám s ďalším postupom pomôžeme
       </p>
-      <div className="flex flex-col flex-1 w-full h-full items-start justify-center gap-y-3 mt-6">
-        <div className="flex flex-row items-center justify-center gap-x-2">
+      <div className='mt-6 flex h-full w-full flex-1 flex-col items-start justify-center gap-y-3'>
+        <div className='flex flex-row items-center justify-center gap-x-2'>
           <FacebookIcon />
-          <span className="font-medium text-shadow-md tracking-tight">
+          <span className='font-medium tracking-tight text-shadow-md'>
             Blueprint Solutions <i>s.r.o.</i>
           </span>
         </div>
-        <div className="flex flex-row items-center justify-center gap-x-2">
+        <div className='flex flex-row items-center justify-center gap-x-2'>
           <InstagramIcon />
-          <span className="font-medium text-shadow-md tracking-tight">
+          <span className='font-medium tracking-tight text-shadow-md'>
             @blueprintsolutions
           </span>
         </div>
-        <div className="flex flex-row items-center justify-center gap-x-2">
-          <Mail className="w-10 h-10 mx-1" />
-          <span className="font-medium text-shadow-md tracking-tight">
+        <div className='flex flex-row items-center justify-center gap-x-2'>
+          <Mail className='mx-1 h-10 w-10' />
+          <span className='font-medium tracking-tight text-shadow-md'>
             contact@blueprint.com
           </span>
         </div>
-        <div className="flex flex-row items-center justify-center gap-x-2">
-          <Phone className="w-10 h-10 mx-1" />
-          <span className="font-medium text-shadow-md tracking-tight">
+        <div className='flex flex-row items-center justify-center gap-x-2'>
+          <Phone className='mx-1 h-10 w-10' />
+          <span className='font-medium tracking-tight text-shadow-md'>
             0900 123 456
           </span>
         </div>
