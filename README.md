@@ -7,6 +7,7 @@ It simulates the creation of a modern and visually engaging website for an
 **internation construction company**. The goal is to design and implement
 a professional web page that highlights the company's services, showcases
 its expertise and drives visitors all the way to the contact form.
+Text is in the Slovak language because the assignment was.
 
 ## ✨ Features
 
@@ -20,11 +21,12 @@ This project features:
 
 ## 🛠️ Technologies
 
-- Project is built with the **Next.js 15** framework
+- Built with the **Next.js 15** and in **React 19**
 - Written in **TypeScript**
-- For styling and ensuring responsiveness, **TailwindCSS v4** is used
-- **Shadcn** is used for basic reusable components
-- **Magic-ui** is used for animation and complex components
+- **TailwindCSS v4** for styling and responsiveness
+- **Shadcn** for basic reusable components
+- **Magic-ui** for animation and complex components
+- **Next Image** for optimized images
 
 ## 🚀 Getting started
 

@@ -44,7 +44,7 @@ export const AboutUs = (): ReactElement => {
               <div className='bg-black'>
                 <Image
                   src='/images/about-us/about-us-team.jpg'
-                  alt='Demolačné práce'
+                  alt='O nás'
                   width={1000}
                   height={1000}
                   className='absolute inset-0 h-full w-full rounded-lg object-cover object-center'
@@ -54,8 +54,7 @@ export const AboutUs = (): ReactElement => {
             }
             Icon={UsersRound}
             description='Sme tím odborníkov, ktorí sa zameriavajú na kvalitné stavebné riešenia.
-                Našou prioritou je spolupráca, precíznosť a dôraz na detaily,
-                ktoré zabezpečujú úspešnú realizáciu každého projektu.'
+                Našou prioritou je spolupráca, precíznosť a dôraz na detaily. Sídlime na ulici Vymyslená 23 v Bratislave.'
             href='#'
             cta='Kontaktujte nás'
           />

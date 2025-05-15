@@ -1,6 +1,6 @@
 import { FacebookIcon } from '@/components/icons/facebook-icon';
 import { InstagramIcon } from '@/components/icons/instagram-icon';
-import { Mail, Phone } from 'lucide-react';
+import { House, Mail, Phone } from 'lucide-react';
 import { ReactElement } from 'react';
 
 /**
@@ -39,7 +39,13 @@ export const ContactInformation = (): ReactElement => {
         <div className='flex flex-row items-center justify-center gap-x-2'>
           <Phone className='mx-1 h-10 w-10' />
           <span className='font-medium tracking-tight text-shadow-md'>
-            0900 123 456
+            +421 900 000 000
+          </span>
+        </div>
+        <div className='flex flex-row items-center justify-center gap-x-2'>
+          <House className='mx-1 h-10 w-10' />
+          <span className='font-medium tracking-tight text-shadow-md'>
+            Vymyslená 23, Bratislava
           </span>
         </div>
       </div>
