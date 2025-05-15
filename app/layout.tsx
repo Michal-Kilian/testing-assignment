@@ -22,7 +22,7 @@ interface RootLayoutProps {
  * @returns {ReactElement}
  */
 export default function RootLayout({
-  children
+  children,
 }: RootLayoutProps): ReactElement {
   return (
     <html lang='en'>

@@ -16,7 +16,9 @@ interface NavigationProps {
  * @param {NavigationProps}
  * @returns {ReactElement}
  */
-export const Navigation = ({ navigationType }: NavigationProps): ReactElement => {
+export const Navigation = ({
+  navigationType,
+}: NavigationProps): ReactElement => {
   return (
     <div
       className={cn(

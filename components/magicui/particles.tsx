@@ -2,10 +2,11 @@
 
 import { cn } from '@/lib/utils';
 import React, {
-  ComponentPropsWithoutRef, ReactElement,
+  ComponentPropsWithoutRef,
+  ReactElement,
   useEffect,
   useRef,
-  useState
+  useState,
 } from 'react';
 
 interface MousePosition {

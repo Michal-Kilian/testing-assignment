@@ -1,6 +1,13 @@
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { ReactElement, RefObject, useCallback, useEffect, useRef, useState } from 'react';
+import {
+  ReactElement,
+  RefObject,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
 /**
  * Hero Video Player component used to play video loops on the hero section, only visible when "professional" Hero mode is set

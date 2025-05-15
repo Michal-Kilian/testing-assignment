@@ -1,6 +1,13 @@
 'use client';
 
-import { ReactElement, ReactNode, RefObject, useEffect, useRef, useState } from 'react';
+import {
+  ReactElement,
+  ReactNode,
+  RefObject,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
 interface AppearOnScrollProps {
   children: ReactNode;
