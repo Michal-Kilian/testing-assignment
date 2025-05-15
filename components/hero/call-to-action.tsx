@@ -3,8 +3,14 @@
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { Package } from 'lucide-react';
 import { handleNavigateToSection } from '@/lib/utils';
+import { ReactElement } from 'react';
 
-export const CallToAction = () => {
+/**
+ * Call-To-Action button component engaging users to find out more information about services
+ *
+ * @returns {ReactElement}
+ */
+export const CallToAction = (): ReactElement => {
   return (
     <Card
       className='bg-background group right-auto left-auto z-2 max-w-64 cursor-pointer border-none py-2 transition-transform duration-300 hover:scale-105'

@@ -1,8 +1,13 @@
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { RefObject, useCallback, useEffect, useRef, useState } from 'react';
+import { ReactElement, RefObject, useCallback, useEffect, useRef, useState } from 'react';
 
-export const HeroVideoPlayer = () => {
+/**
+ * Hero Video Player component used to play video loops on the hero section, only visible when "professional" Hero mode is set
+ *
+ * @returns {ReactElement}
+ */
+export const HeroVideoPlayer = (): ReactElement => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState<number>(0);
   const videoRef: RefObject<HTMLVideoElement | null> =
     useRef<HTMLVideoElement | null>(null);
@@ -10,9 +15,9 @@ export const HeroVideoPlayer = () => {
     useRef<NodeJS.Timeout | null>(null);
 
   const videos: Array<string> = [
-    '/images/hero-video-loop-3.mp4',
-    '/images/hero-video-loop.mp4',
-    '/images/hero-video-loop-2.mp4',
+    '/videos/hero-video-loop-3.mp4',
+    '/videos/hero-video-loop.mp4',
+    '/videos/hero-video-loop-2.mp4',
   ];
 
   const startRotationInterval = useCallback(() => {

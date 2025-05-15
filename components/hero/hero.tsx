@@ -6,12 +6,19 @@ import { HeroAnimation } from '@/components/hero/hero-animation';
 import { cn } from '@/lib/utils';
 import { HeroMode } from '@/lib/types';
 import { HeroVideoPlayer } from '@/components/hero/hero-video-player';
+import { ReactElement } from 'react';
 
 interface HeroProps {
   heroMode: HeroMode;
 }
 
-export const Hero = ({ heroMode }: HeroProps) => {
+/**
+ * Hero section component engaging users to find out more information about services
+ *
+ * @param {HeroProps}
+ * @returns {ReactElement}
+ */
+export const Hero = ({ heroMode }: HeroProps): ReactElement => {
   return (
     <section
       id='heroSection'

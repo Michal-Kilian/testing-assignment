@@ -1,5 +1,6 @@
 {
   "name": "testing-assignment",
+  "author": "Michal Kilian",
   "version": "0.1.0",
   "private": true,
   "scripts": {

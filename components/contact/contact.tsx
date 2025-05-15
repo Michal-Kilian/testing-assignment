@@ -2,8 +2,14 @@
 
 import { ContactForm } from '@/components/contact/contact-form';
 import { ContactInformation } from '@/components/contact/contact-information';
+import { ReactElement } from 'react';
 
-export const Contact = () => {
+/**
+ * Contact section containing the contact information and the contact form
+ *
+ * @returns {ReactElement}
+ */
+export const Contact = (): ReactElement => {
   return (
     <section
       id='contactSection'

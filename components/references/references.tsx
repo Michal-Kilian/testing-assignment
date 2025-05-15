@@ -2,8 +2,14 @@ import { Marquee } from '@/components/magicui/marquee';
 import { REFERENCES } from '@/lib/references';
 import { Reference } from '@/lib/types';
 import { ReferenceCard } from '@/components/references/reference-card';
+import { ReactElement } from 'react';
 
-export const References = () => {
+/**
+ * References section containing the Marquee animation of the References cards
+ *
+ * @returns {ReactElement}
+ */
+export const References = (): ReactElement => {
   return (
     <section
       id='referencesSection'

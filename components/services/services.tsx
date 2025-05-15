@@ -1,8 +1,14 @@
 import { SERVICES } from '@/lib/services';
 import { BentoCard, BentoGrid } from '@/components/magicui/bento-grid';
 import { Service } from '@/lib/types';
+import { ReactElement } from 'react';
 
-export const Services = () => {
+/**
+ * Services section containing the Bento Grid of all services that the company provides
+ *
+ * @returns {ReactElement}
+ */
+export const Services = (): ReactElement => {
   return (
     <section
       id='servicesSection'

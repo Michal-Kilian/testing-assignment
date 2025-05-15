@@ -1,4 +1,11 @@
-export const InstagramIcon = () => {
+import { ReactElement } from 'react';
+
+/**
+ * Custom Instagram Icon component for the contact section
+ *
+ * @returns {ReactElement}
+ */
+export const InstagramIcon = (): ReactElement => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'

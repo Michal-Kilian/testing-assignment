@@ -1,8 +1,16 @@
+import { ReactElement } from 'react';
+
 interface LogoProps {
   size?: number;
 }
 
-export const Logo = ({ size = 30 }: LogoProps) => {
+/**
+ * Simple custom Logo component used in the header
+ *
+ * @param {LogoProps}
+ * @returns {ReactElement}
+ */
+export const Logo = ({ size = 30 }: LogoProps): ReactElement => {
   return (
     <svg
       width={size}

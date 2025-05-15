@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef, ReactElement } from 'react';
 
 interface MarqueeProps extends ComponentPropsWithoutRef<'div'> {
   /**
@@ -32,6 +32,12 @@ interface MarqueeProps extends ComponentPropsWithoutRef<'div'> {
   repeat?: number;
 }
 
+/**
+ * Marquee component from magic-ui used in the references section
+ *
+ * @param {MarqueeProps}
+ * @returns {ReactElement}
+ */
 export function Marquee({
   className,
   reverse = false,
@@ -40,7 +46,7 @@ export function Marquee({
   vertical = false,
   repeat = 4,
   ...props
-}: MarqueeProps) {
+}: MarqueeProps): ReactElement {
   return (
     <div
       {...props}

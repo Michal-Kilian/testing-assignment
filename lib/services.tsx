@@ -2,6 +2,9 @@ import { Service } from '@/lib/types';
 import { Cuboid, Fan, Hammer, Layers, Shovel } from 'lucide-react';
 import Image from 'next/image';
 
+/**
+ * Services array used for the Bento Cards of the services section
+ */
 export const SERVICES: Array<Service> = [
   {
     id: '1',
@@ -15,7 +18,7 @@ export const SERVICES: Array<Service> = [
     background: (
       <div className='bg-black'>
         <Image
-          src='/images/services-demolition.jpg'
+          src='/images/services/services-demolition.jpg'
           alt='Demolačné práce'
           width={1000}
           height={1000}
@@ -37,7 +40,7 @@ export const SERVICES: Array<Service> = [
     background: (
       <div className='bg-black'>
         <Image
-          src='/images/services-excavation.jfif'
+          src='/images/services/services-excavation.jfif'
           alt='Výkopové práce'
           width={1000}
           height={1000}
@@ -59,7 +62,7 @@ export const SERVICES: Array<Service> = [
     background: (
       <div className='bg-black'>
         <Image
-          src='/images/services-masonry.jpg'
+          src='/images/services/services-masonry.jpg'
           alt='Murárske práce'
           width={1000}
           height={1000}
@@ -81,7 +84,7 @@ export const SERVICES: Array<Service> = [
     background: (
       <div className='bg-black'>
         <Image
-          src='/images/services-airtech.jpg'
+          src='/images/services/services-airtech.jpg'
           alt='Vzduchotechnika'
           width={1000}
           height={1000}
@@ -103,7 +106,7 @@ export const SERVICES: Array<Service> = [
     background: (
       <div className='bg-black'>
         <Image
-          src='/images/services-construction.jpeg'
+          src='/images/services/services-construction.jpeg'
           alt='Komplexné stavebné riešenia'
           width={1000}
           height={1000}

@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode, RefObject, useEffect, useRef, useState } from 'react';
+import { ReactElement, ReactNode, RefObject, useEffect, useRef, useState } from 'react';
 
 interface AppearOnScrollProps {
   children: ReactNode;
@@ -8,11 +8,17 @@ interface AppearOnScrollProps {
   animationClass?: string;
 }
 
+/**
+ * Component that makes its children appear after a part is in users view
+ *
+ * @param {AppearOnScrollProps}
+ * @returns {ReactElement}
+ */
 export const AppearOnScroll = ({
   children,
   threshold = 0.3,
   animationClass = 'fade-in',
-}: AppearOnScrollProps) => {
+}: AppearOnScrollProps): ReactElement => {
   const [inView, setInView] = useState(false);
   const ref: RefObject<HTMLDivElement | null> = useRef<HTMLDivElement>(null);
 

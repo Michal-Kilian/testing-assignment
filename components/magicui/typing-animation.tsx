@@ -2,7 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import { motion, MotionProps } from 'motion/react';
-import { useEffect, useRef, useState } from 'react';
+import { ReactElement, useEffect, useRef, useState } from 'react';
 
 interface TypingAnimationProps extends MotionProps {
   children: string;
@@ -13,6 +13,12 @@ interface TypingAnimationProps extends MotionProps {
   startOnView?: boolean;
 }
 
+/**
+ * Typing animation component from magic-ui used for the about us section
+ *
+ * @param {TypingAnimationProps}
+ * @returns {ReactElement}
+ */
 export function TypingAnimation({
   children,
   className,
@@ -21,7 +27,7 @@ export function TypingAnimation({
   as: Component = 'div',
   startOnView = false,
   ...props
-}: TypingAnimationProps) {
+}: TypingAnimationProps): ReactElement {
   const MotionComponent = motion.create(Component, {
     forwardMotionProps: true,
   });

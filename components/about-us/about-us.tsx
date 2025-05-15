@@ -3,8 +3,14 @@ import { DynamicTypingAnimation } from '@/components/about-us/dynamic-typing-ani
 import Image from 'next/image';
 import { BentoCard } from '@/components/magicui/bento-grid';
 import { UsersRound } from 'lucide-react';
+import { ReactElement } from 'react';
 
-export const AboutUs = () => {
+/**
+ * About Us section containing animated headlines and some information about the company
+ *
+ * @returns {ReactElement}
+ */
+export const AboutUs = (): ReactElement => {
   return (
     <section
       id='aboutUsSection'
@@ -37,7 +43,7 @@ export const AboutUs = () => {
             background={
               <div className='bg-black'>
                 <Image
-                  src='/images/about-us-team.jpg'
+                  src='/images/about-us/about-us-team.jpg'
                   alt='Demolačné práce'
                   width={1000}
                   height={1000}

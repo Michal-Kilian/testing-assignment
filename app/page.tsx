@@ -7,11 +7,16 @@ import { AppearOnScroll } from '@/components/appear-on-scroll/appear-on-scroll';
 import { AboutUs } from '@/components/about-us/about-us';
 import { References } from '@/components/references/references';
 import { DevControls } from '@/components/dev/dev-controls';
-import { useState } from 'react';
+import { ReactElement, useState } from 'react';
 import { HeroMode } from '@/lib/types';
 import { Particles } from '@/components/magicui/particles';
 
-export default function Home() {
+/**
+ * Main page containing the sections: Hero, Services, About Us, References & Contact
+ *
+ * @returns {ReactElement}
+ */
+export default function Home(): ReactElement {
   const [heroMode, setHeroMode] = useState<HeroMode>('professional');
 
   return (

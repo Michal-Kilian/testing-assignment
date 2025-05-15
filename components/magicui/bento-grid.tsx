@@ -1,5 +1,5 @@
 import { ArrowRightIcon } from '@radix-ui/react-icons';
-import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react';
+import { ComponentPropsWithoutRef, ElementType, ReactElement, ReactNode } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { cn, handleNavigateToSection } from '@/lib/utils';
@@ -19,7 +19,13 @@ interface BentoCardProps extends ComponentPropsWithoutRef<'div'> {
   cta: string;
 }
 
-const BentoGrid = ({ children, className, ...props }: BentoGridProps) => {
+/**
+ * Bento Grid component from magic-ui used in the services section
+ *
+ * @param {BentoGridProps}
+ * @returns {ReactElement}
+ */
+const BentoGrid = ({ children, className, ...props }: BentoGridProps): ReactElement => {
   return (
     <div
       className={cn(
@@ -33,6 +39,12 @@ const BentoGrid = ({ children, className, ...props }: BentoGridProps) => {
   );
 };
 
+/**
+ * Bento Card component from magic-ui used for service cards and for the about us card
+ *
+ * @param {BentoCardProps}
+ * @returns {ReactElement}
+ */
 const BentoCard = ({
   name,
   className,
@@ -41,7 +53,7 @@ const BentoCard = ({
   description,
   cta,
   ...props
-}: BentoCardProps) => (
+}: BentoCardProps): ReactElement => (
   <div
     key={name}
     className={cn(

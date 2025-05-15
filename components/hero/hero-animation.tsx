@@ -1,10 +1,16 @@
 import Image from 'next/image';
+import { ReactElement } from 'react';
 
-export const HeroAnimation = () => {
+/**
+ * Hero Animation component only visible when "playful" Hero mode is set
+ *
+ * @returns {ReactElement}
+ */
+export const HeroAnimation = (): ReactElement => {
   return (
     <div className='absolute bottom-0 z-1 flex w-full flex-row items-end justify-center'>
       <Image
-        src={'/images/city-gif.gif'}
+        src={'/gifs/city-gif.gif'}
         alt={'Hero Image'}
         width={300}
         height={300}
@@ -12,7 +18,7 @@ export const HeroAnimation = () => {
         unoptimized
       />
       <Image
-        src={'/images/city-gif.gif'}
+        src={'/gifs/city-gif.gif'}
         alt={'Hero Image'}
         width={300}
         height={300}
@@ -20,7 +26,7 @@ export const HeroAnimation = () => {
         unoptimized
       />
       <Image
-        src={'/images/city-gif.gif'}
+        src={'/gifs/city-gif.gif'}
         alt={'Hero Image'}
         width={300}
         height={300}

@@ -1,6 +1,12 @@
 import { Navigation } from '@/components/navigation/navigation';
+import { ReactElement } from 'react';
 
-export const Footer = () => {
+/**
+ * Footer component containing navigation to every section
+ *
+ * @returns {ReactElement}
+ */
+export const Footer = (): ReactElement => {
   return (
     <footer className='text-primary-foreground relative h-64 w-full bg-black'>
       <div className='from-primary absolute top-0 z-1 h-32 w-full bg-linear-to-b to-black' />

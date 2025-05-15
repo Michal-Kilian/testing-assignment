@@ -4,12 +4,19 @@ import { NavigationType } from '@/lib/types';
 import { Heart, House, Mail, Package, UsersRound } from 'lucide-react';
 import { NavigationButton } from '@/components/navigation/navigation-button';
 import { cn } from '@/lib/utils';
+import { ReactElement } from 'react';
 
 interface NavigationProps {
   navigationType: NavigationType;
 }
 
-export const Navigation = ({ navigationType }: NavigationProps) => {
+/**
+ * Navigation component used in the header and footer
+ *
+ * @param {NavigationProps}
+ * @returns {ReactElement}
+ */
+export const Navigation = ({ navigationType }: NavigationProps): ReactElement => {
   return (
     <div
       className={cn(

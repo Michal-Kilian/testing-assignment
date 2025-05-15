@@ -1,7 +1,7 @@
 import { Form } from '@/components/ui/form';
 import { Loader2, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useState } from 'react';
+import { ReactElement, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { contactSchema } from '@/lib/schemas';
@@ -10,7 +10,12 @@ import { toast } from 'sonner';
 import { Card, CardContent } from '@/components/ui/card';
 import { ContactFormField } from '@/components/contact/contact-form-field';
 
-export const ContactForm = () => {
+/**
+ * Contact Form component with fields for email, service & description
+ *
+ * @returns {ReactElement}
+ */
+export const ContactForm = (): ReactElement => {
   const [submitPending, setSubmitPending] = useState<boolean>(false);
 
   const form = useForm<z.infer<typeof contactSchema>>({

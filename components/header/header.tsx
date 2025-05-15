@@ -1,8 +1,14 @@
 import { Logo } from '@/components/icons/logo';
 import { Navigation } from '@/components/navigation/navigation';
 import Link from 'next/link';
+import { ReactElement } from 'react';
 
-export const Header = () => {
+/**
+ * Header component containing the navigation to all sections
+ *
+ * @returns {ReactElement}
+ */
+export const Header = (): ReactElement => {
   return (
     <header className='bg-primary text-primary-foreground flex h-fit w-full flex-row items-center justify-between p-2'>
       <Link href='#' className='w-full'>

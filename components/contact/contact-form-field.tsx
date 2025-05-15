@@ -11,7 +11,7 @@ import { ControllerRenderProps, UseFormReturn } from 'react-hook-form';
 import { z } from 'zod';
 import { contactSchema } from '@/lib/schemas';
 import { FormFieldName, Service } from '@/lib/types';
-import { HTMLInputTypeAttribute } from 'react';
+import { HTMLInputTypeAttribute, ReactElement } from 'react';
 import {
   Select,
   SelectContent,
@@ -30,13 +30,19 @@ interface ContactFormFieldProps {
   placeholder: string;
 }
 
+/**
+ * Contact Form Field component accepting 3 types of input fields
+ *
+ * @param {ContactFormFieldProps}
+ * @returns {ReactElement}
+ */
 export const ContactFormField = ({
   form,
   name,
   label,
   type,
   placeholder,
-}: ContactFormFieldProps) => {
+}: ContactFormFieldProps): ReactElement => {
   const getInputField = (
     field: ControllerRenderProps<
       {

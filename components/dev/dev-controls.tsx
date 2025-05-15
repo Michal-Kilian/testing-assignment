@@ -8,7 +8,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
 import { Briefcase, Smile } from 'lucide-react';
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, ReactElement, SetStateAction } from 'react';
 import { HeroMode } from '@/lib/types';
 import {
   Tooltip,
@@ -21,10 +21,16 @@ interface DevControlsProps {
   setHeroModeAction: Dispatch<SetStateAction<HeroMode>>;
 }
 
+/**
+ * Developer Controls component used to change the Hero section theme
+ *
+ * @param {DevControlsProps}
+ * @returns {ReactElement}
+ */
 export const DevControls = ({
   heroMode,
   setHeroModeAction,
-}: DevControlsProps) => {
+}: DevControlsProps): ReactElement => {
   return (
     <DropdownMenu>
       <Tooltip>

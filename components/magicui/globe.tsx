@@ -2,7 +2,7 @@
 
 import createGlobe, { COBEOptions } from 'cobe';
 import { useMotionValue, useSpring } from 'motion/react';
-import { useEffect, useRef } from 'react';
+import { ReactElement, useEffect, useRef } from 'react';
 
 import { cn } from '@/lib/utils';
 
@@ -38,13 +38,22 @@ const GLOBE_CONFIG: COBEOptions = {
   ],
 };
 
+/**
+ * Globe component from magic-ui used as a background in the about us section
+ *
+ * @param {{
+ *   className?: string;
+ *   config?: COBEOptions;
+ * }}
+ * @returns {ReactElement}
+ */
 export function Globe({
   className,
   config = GLOBE_CONFIG,
 }: {
   className?: string;
   config?: COBEOptions;
-}) {
+}): ReactElement {
   let phi = 0;
   let width = 0;
   const canvasRef = useRef<HTMLCanvasElement>(null);

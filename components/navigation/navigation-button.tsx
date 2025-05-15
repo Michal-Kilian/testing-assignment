@@ -1,7 +1,7 @@
 import { cn, handleNavigateToSection } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { NavigationType, SectionType } from '@/lib/types';
-import { ElementType } from 'react';
+import { ElementType, ReactElement } from 'react';
 import {
   Tooltip,
   TooltipContent,
@@ -15,12 +15,18 @@ interface NavigationButtonProps {
   navigationType: NavigationType;
 }
 
+/**
+ * Navigation Button component used in the header and footer
+ *
+ * @param {NavigationProps}
+ * @returns {ReactElement}
+ */
 export const NavigationButton = ({
   title,
   icon: Icon,
   section,
   navigationType,
-}: NavigationButtonProps) => {
+}: NavigationButtonProps): ReactElement => {
   return (
     <Tooltip>
       <TooltipTrigger asChild>

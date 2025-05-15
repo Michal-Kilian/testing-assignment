@@ -1,8 +1,14 @@
 import { FacebookIcon } from '@/components/icons/facebook-icon';
 import { InstagramIcon } from '@/components/icons/instagram-icon';
 import { Mail, Phone } from 'lucide-react';
+import { ReactElement } from 'react';
 
-export const ContactInformation = () => {
+/**
+ * Component displaying the contact information about the company
+ *
+ * @returns {ReactElement}
+ */
+export const ContactInformation = (): ReactElement => {
   return (
     <div className='text-primary-foreground flex h-full w-full max-w-lg flex-col items-start justify-center'>
       <h3 className='mb-2 w-full text-left text-3xl font-medium tracking-tight text-shadow-lg'>

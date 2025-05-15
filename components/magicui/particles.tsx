@@ -2,10 +2,10 @@
 
 import { cn } from '@/lib/utils';
 import React, {
-  ComponentPropsWithoutRef,
+  ComponentPropsWithoutRef, ReactElement,
   useEffect,
   useRef,
-  useState,
+  useState
 } from 'react';
 
 interface MousePosition {
@@ -76,6 +76,12 @@ type Circle = {
   magnetism: number;
 };
 
+/**
+ * Particles component from magic-ui used for the background of the page
+ *
+ * @param {ParticlesProps}
+ * @returns {ReactElement}
+ */
 export const Particles: React.FC<ParticlesProps> = ({
   className = '',
   quantity = 100,
@@ -87,7 +93,7 @@ export const Particles: React.FC<ParticlesProps> = ({
   vx = 0,
   vy = 0,
   ...props
-}) => {
+}: ParticlesProps): ReactElement => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
