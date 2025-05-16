@@ -21,7 +21,7 @@ export const ContactInformation = (): ReactElement => {
         <div className='flex flex-row items-center justify-center gap-x-2'>
           <FacebookIcon />
           <span className='font-medium tracking-tight text-shadow-md'>
-            Blueprint Solutions <i>s.r.o.</i>
+            Blueprint Solutions s.r.o.
           </span>
         </div>
         <div className='flex flex-row items-center justify-center gap-x-2'>
